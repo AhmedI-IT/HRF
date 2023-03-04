@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="../maincss.css"> -->
+    <!-- <link rel="stylesheet" href="account.css"> -->
+    <link rel="stylesheet" href="account1.css">
+    <title>Account</title>
+</head>
+<body>
+
+    <center>
+        <h1>أضافة حسابات الاداريين</h1>
+    </center>
+    <div class="container">
+    <form action="account.php" method="post">
+       <div class="row">
+       <div class="col-25">
+        <label for="name_emp">اسم المنتسب</label>
+      </div>
+      <div class="col-75">
+        <input class="inp"   required  type="text" id="name_emp" name="name_emp" placeholder="اسم المنتسب..">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="colleg_name">اسم الكلية</label>
+      </div>
+      <div class="col-75">
+        <select  id="colleg_name" name="colleg_name"   required >
+          <option value="">أختر الكلية</option>
+          <option value="كلية علوم الحاسوب والرياضيات">كلية علوم الحاسوب والرياضيات</option>
+            <option value="كلية التربية للعلوم الانسانية">كلية التربية للعلوم الانسانية</option>
+            <option value="كلية التربية للعلوم الصرفة"> كلية التربية للعلوم الصرفة</option>
+            <option value="كلية الادارة والاقتصاد">كلية الادارة والاقتصاد</option>
+            <option value="كلية التربية البدنية وعلوم الرياضة">كلية التربية البدنية وعلوم الرياضة</option>
+            <option value="كلية الاّداب">كلية الاّداب</option>
+            <option value="كلية العلوم">كلية العلوم</option>
+            <option value="كلية الهندسة">كلية الهندسة</option>
+            <option value="كلية الطب">كلية الطب</option>
+            <option value="كلية القانون">كلية القانون</option>
+            <option value="كلية الزراعة والاهوار">كلية الزراعة والاهوار</option>
+            <option value="كلية الصيدلة">كلية الصيدلة</option>
+            <option value="كلية الاعلام">كلية الاعلام</option>
+            <option value="كلية الطب البيطري">كلية الطب البيطري</option>
+            <option value="كلية التربية للبنات">كلية التربية للبنات</option>
+            <option value="كلية العلوم الاسلامية">كلية العلوم الاسلامية</option>
+            <option value="كلية الاّثار">كلية الاّثار</option>
+            <option value="كلية طب الاسنان">كلية طب الاسنان</option>
+            <option value="كلية التربية الاساسية">كلية التربية الاساسية</option>
+        </select>
+      </div>
+    </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="eemail">الايميل</label>
+        </div>
+        <div class="col-75">
+          <input class="inp"   required  type="email" id="eemail" name="eemail" placeholder=" الايميل..">
+        </div>
+      </div>
+
+      
+      <div class="row">
+      <div class="col-25">
+        <label for="username">اسم المستخدم</label>
+      </div>
+      <div class="col-75">
+        <input class="inp"   required  type="text" id="username" name="username" placeholder="اسم المستخدم..">
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="pass">كلمة السر </label>
+      </div>
+      <div class="col-75">
+        <input class="inp"  required type="password" id="pass" name="pass" placeholder=" كلمة السر ..">
+      </div>
+    </div>
+
+
+      <div class="row">
+        <div class="col-25">
+          <label for="type_acc">نوع الحساب</label>
+        </div>
+        <div class="col-75">
+          <select  id="type_acc" name="type_acc">
+            <option value="اداري">اداري</option>
+            <option value="تدريسي">تدريسي</option>
+          </select>
+        </div>
+      </div>
+
+      <table>
+        <tr>
+          <td>
+            <div class="row">
+              <input class="btn" type="submit" value="حفظ">
+            </div>
+          </td>
+          <td>
+            <div class="row">
+              <button>
+                <a href="../main/main.html">رجوع</a>
+              </button>
+            </div>
+           
+          </td>
+        </tr>
+       
+      </table>
+      
+      
+     
+    
+      
+    </form>
+  </div>
+  
+</body>
+</html>
