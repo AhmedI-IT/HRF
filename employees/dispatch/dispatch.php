@@ -78,7 +78,7 @@ $_SESSION['c_id'];
                     <label for="dat">تاريخ صدور الامر</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="dat" name="dat" placeholder="">
+                    <input type="date" id="dat" name="dat" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -87,7 +87,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -96,7 +96,7 @@ $_SESSION['c_id'];
                     <label for="date_comm">تاريخ المباشرة</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date_comm" name="date_comm" placeholder="">
+                    <input type="date" id="date_comm" name="date_comm" placeholder="" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -104,7 +104,7 @@ $_SESSION['c_id'];
                     <label for="provider_it">الجهة الموفر اليها</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="provider_it" name="provider_it" placeholder="  الجهة الموفر اليها ..">
+                    <input type="text" id="provider_it" name="provider_it" placeholder="  الجهة الموفر اليها .." required autocomplete="off">
                 </div>
             </div>
 
@@ -113,7 +113,7 @@ $_SESSION['c_id'];
                     <label for="purpose_dispatch">الغرض من الايفاد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="purpose_dispatch" name="purpose_dispatch" placeholder="  الغرض من الايفاد ..">
+                    <input type="text" id="purpose_dispatch" name="purpose_dispatch" placeholder="  الغرض من الايفاد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -122,7 +122,7 @@ $_SESSION['c_id'];
                     <label for="dispatch_period">فترة الايفاد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="dispatch_period" name="dispatch_period" placeholder="  فترة الايفاد ..">
+                    <input type="text" id="dispatch_period" name="dispatch_period" placeholder="  فترة الايفاد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -131,7 +131,7 @@ $_SESSION['c_id'];
                     <label for="state">الدولة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="state" name="state" placeholder="  الدولة ..">
+                    <input type="text" id="state" name="state" placeholder="  الدولة .." required autocomplete="off">
                 </div>
             </div>
 

@@ -75,7 +75,7 @@ $_SESSION['c_id'];
                     <label for="ministerial_order">الامر الوزاري</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="ministerial_order" name="ministerial_order" placeholder=" الامر الوزاري ..">
+                    <input type="text" id="ministerial_order" name="ministerial_order" placeholder=" الامر الوزاري .." required autocomplete="off">
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ $_SESSION['c_id'];
                     <label for="mnumber">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="mnumber" name="mnumber" placeholder="  العدد ..">
+                    <input type="text" id="mnumber" name="mnumber" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@ $_SESSION['c_id'];
                     <label for="university_matter">الامر الجامعي </label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="university_matter" name="university_matter" placeholder="  الامر الجامعي ..">
+                    <input type="text" id="university_matter" name="university_matter" placeholder="  الامر الجامعي .." required autocomplete="off">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ $_SESSION['c_id'];
                     <label for="unumber">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="unumber" name="unumber" placeholder="  العدد ..">
+                    <input type="text" id="unumber" name="unumber" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -111,7 +111,7 @@ $_SESSION['c_id'];
                     <label for="country">الدولة / ولاية</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="country" name="country" placeholder="  الدولة / ولاية ..">
+                    <input type="text" id="country" name="country" placeholder="  الدولة / ولاية .." required autocomplete="off">
                 </div>
             </div>
 
@@ -120,7 +120,7 @@ $_SESSION['c_id'];
                     <label for="certificate_req">الشهادة المطلوبة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="certificate_req" name="certificate_req" placeholder="  الشهادة المطلوبة ..">
+                    <input type="text" id="certificate_req" name="certificate_req" placeholder="  الشهادة المطلوبة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -129,7 +129,7 @@ $_SESSION['c_id'];
                     <label for="general_req">التخصص المطلوب العام</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="general_req" name="general_req" placeholder="  التخصص المطلوب العام ..">
+                    <input type="text" id="general_req" name="general_req" placeholder="  التخصص المطلوب العام .." required autocomplete="off">
                 </div>
             </div>
 
@@ -138,7 +138,7 @@ $_SESSION['c_id'];
                     <label for="spec">التخصص الدقيق</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="spec" name="spec" placeholder="  التخصص الدقيق ..">
+                    <input type="text" id="spec" name="spec" placeholder="  التخصص الدقيق .." required autocomplete="off">
                 </div>
             </div>
 
@@ -147,7 +147,7 @@ $_SESSION['c_id'];
                     <label for="vacation_period">فترة الاجازه</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="vacation_period" name="vacation_period" placeholder="  فترة الاجازة ..">
+                    <input type="text" id="vacation_period" name="vacation_period" placeholder="  فترة الاجازة .." required autocomplete="off">
                 </div>
             </div>
 

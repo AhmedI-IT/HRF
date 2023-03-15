@@ -119,7 +119,7 @@ $_SESSION['c_id'];
                 <button class="cn"><a href="#">قسم علمي</a></button>
             </div>
             <div>
-                <button class="cn"><?php echo "<a href='../bonus/bonus.php?ID=" . $row['id'] . "'>العلاوة</a>" ?></button>
+                <button class="cn"><?php echo "<a href='../bonus/bonus.php?ID=" . $row['id'] . "'> العلاوة او الترفيع</a>" ?></button>
                 <button class="cn"><?php echo "<a href='salary.php?ID=" . $row['id'] . "'>الراتب</a>" ?></button>
                 <!-- <button class="cn"><a href="salary.php">الراتب</a></button> -->
             </div>

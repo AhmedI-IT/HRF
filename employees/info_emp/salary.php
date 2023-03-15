@@ -103,15 +103,20 @@ $_SESSION['c_id'];
         $link = mysqli_connect("localhost", "root", "", "hrf") or die("Faild");
         // $query = "SELECT * FROM `employee` ";
         // $query = "SELECT hiring.* FROM hiring WHERE   hiring.e_id = $id ";
-        $query = "SELECT hiring.*, scientific_title.*, direct.*, certificates.*, employee.* FROM hiring, scientific_title, direct, certificates, employee WHERE  scientific_title.e_id = hiring.e_id and direct.e_id = hiring.e_id and certificates.e_id = hiring.e_id and employee.id = hiring.e_id  and hiring.e_id = $id ";
+        // $query = "SELECT hiring.*, scientific_title.*, direct.*, certificates.*, employee.* FROM hiring, scientific_title, direct, certificates, employee WHERE  scientific_title.e_id = hiring.e_id and direct.e_id = hiring.e_id and certificates.e_id = hiring.e_id and employee.id = hiring.e_id  and hiring.e_id = $id ";
+        // $query = "SELECT bonus.*, scientific_title.*, direct.*, certificates.*, employee.* FROM bonus, scientific_title, direct, certificates, employee WHERE  scientific_title.e_id = bonus.e_id and direct.e_id = bonus.e_id and certificates.e_id = bonus.e_id and employee.id = bonus.e_id  and bonus.e_id = $id ";
+        $query = "SELECT bonus.*, scientific_title.*, direct.*, certificates.*, employee.* FROM bonus, scientific_title, direct, certificates, employee WHERE  scientific_title.e_id = bonus.e_id and direct.e_id = bonus.e_id and certificates.e_id = bonus.e_id and employee.id = bonus.e_id  and bonus.e_id = $id  and bonus.date <= NOW() ORDER BY bonus.date DESC LIMIT 1";
+        // $sql = "SELECT * FROM table_name WHERE date_field <= NOW() ORDER BY date_field DESC LIMIT 1";
 
 
         $res = mysqli_query($link, $query);
 
 
         while ($row = mysqli_fetch_array($res)) {
-            $degree = $row['degree'];
-            $stage = $row['stage'];
+            // $degree = $row['degree'];
+            $degree = $row['mark'];
+            // $stage = $row['stage'];
+            $stage = $row['level'];
             // لان المصفوفة تبدأ من 0
             $degreem = $degree - 1;
             $stagem = $stage - 1;
@@ -150,8 +155,10 @@ $_SESSION['c_id'];
             echo "<th colspan='4'><h1>" . $row['name'] . "</h1></th>";
             echo "</tr>";
             echo "<tr>";
-            echo "<td>الدرجة: <br>" . $row['degree'] . "</td>";
-            echo "<td>المرحلة: <br>" . $row['stage'] . "</td>";
+            // echo "<td>الدرجة: <br>" . $row['degree'] . "</td>";
+            echo "<td>الدرجة: <br>" . $row['mark'] . "</td>";
+            // echo "<td>المرحلة: <br>" . $row['stage'] . "</td>";
+            echo "<td>المرحلة: <br>" . $row['level'] . "</td>";
             echo "<td>السنة: <br>" .  $year . "</td>";
             echo "<td>الشهر: <br>" . $today . "</td>";
             echo "</tr>";

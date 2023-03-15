@@ -77,7 +77,7 @@ $_SESSION['c_id'];
                     <label for="type_punishment">نوع العقوبة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="type_punishment" name="type_punishment" placeholder=" نوع العقوبة..">
+                    <input type="text" id="type_punishment" name="type_punishment" placeholder=" نوع العقوبة.." required autocomplete="off">
                 </div>
             </div>
 
@@ -86,7 +86,7 @@ $_SESSION['c_id'];
                     <label for="ad_number">رقم الامر الاداري</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="ad_number" name="ad_number" placeholder="  رقم الامر الاداري..">
+                    <input type="text" id="ad_number" name="ad_number" placeholder="  رقم الامر الاداري.." required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -94,7 +94,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -103,7 +103,7 @@ $_SESSION['c_id'];
                     <label for="reason_punishment">سبب العقوبة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="reason_punishment" name="reason_punishment" placeholder=" سبب العقوبة..">
+                    <input type="text" id="reason_punishment" name="reason_punishment" placeholder=" سبب العقوبة.." required autocomplete="off">
                 </div>
             </div>
 
@@ -112,7 +112,7 @@ $_SESSION['c_id'];
                     <label for="code_no">قانون رقم</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="code_no" name="code_no" placeholder="  قانون رقم ..">
+                    <input type="text" id="code_no" name="code_no" placeholder="  قانون رقم .." required autocomplete="off">
                 </div>
             </div>
 

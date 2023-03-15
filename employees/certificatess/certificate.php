@@ -75,7 +75,7 @@ $_SESSION['c_id'];
                     <label for="certific">الشهادة </label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="certific" name="certific" placeholder="  الشهادة ..">
+                    <input type="text" id="certific" name="certific" placeholder="  الشهادة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ $_SESSION['c_id'];
                     <label for="general_jur">التخصص العام</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="general_jur" name="general_jur" placeholder="  التخصص العام ..">
+                    <input type="text" id="general_jur" name="general_jur" placeholder="  التخصص العام .." required autocomplete="off">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@ $_SESSION['c_id'];
                     <label for="spec">التخصص الدقيق</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="spec" name="spec" placeholder="  التخصص الدقيق ..">
+                    <input type="text" id="spec" name="spec" placeholder="  التخصص الدقيق .." required autocomplete="off">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ $_SESSION['c_id'];
                     <label for="date_obtained">تاريخ الحصول عليها</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date_obtained" name="date_obtained" placeholder="">
+                    <input type="date" id="date_obtained" name="date_obtained" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -111,7 +111,7 @@ $_SESSION['c_id'];
                     <label for="date_univ">تاريخ الامر الجامعي</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date_univ" name="date_univ" placeholder="">
+                    <input type="date" id="date_univ" name="date_univ" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -120,7 +120,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -130,7 +130,7 @@ $_SESSION['c_id'];
                     <label for="anran_thesis">عنوان الرسالة / الاطروحة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="anran_thesis" name="anran_thesis" placeholder="   عنوان الرسالة / الاطروحة..">
+                    <input type="text" id="anran_thesis" name="anran_thesis" placeholder="   عنوان الرسالة / الاطروحة.." required autocomplete="off">
                 </div>
             </div>
 
@@ -139,7 +139,7 @@ $_SESSION['c_id'];
                     <label for="univ">جامعة / كلية</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="univ" name="univ" placeholder="   جامعة / كلية..">
+                    <input type="text" id="univ" name="univ" placeholder="   جامعة / كلية.." required autocomplete="off">
                 </div>
             </div>
 
@@ -148,7 +148,7 @@ $_SESSION['c_id'];
                     <label for="state">الدولة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="state" name="state" placeholder="  الدولة ..">
+                    <input type="text" id="state" name="state" placeholder="  الدولة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -157,7 +157,7 @@ $_SESSION['c_id'];
                     <label for="certific_allowances">مخصصات الشهادة</label>
                 </div>
                 <div class="col-75">
-                    <select id="certific_allowances" name="certific_allowances">
+                    <select id="certific_allowances" name="certific_allowances" required autocomplete="off">
                         <option value="100">دكتوراة</option>
                         <option value="75">ماجستير</option>
                         <option value="45">بكالوريوس</option>

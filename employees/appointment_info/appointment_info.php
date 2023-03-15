@@ -75,7 +75,7 @@ $_SESSION['c_id'];
                     <label for="date_hir">تاريخ التعيين</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date_hir" name="date_hir" placeholder="">
+                    <input type="date" id="date_hir" name="date_hir" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@ $_SESSION['c_id'];
                     <label for="issu_entity">الجهة المصدرة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="issu_entity" name="issu_entity" placeholder="  الجهة المصدرة ..">
+                    <input type="text" id="issu_entity" name="issu_entity" placeholder="  الجهة المصدرة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ $_SESSION['c_id'];
                     <label for="date_comm">تاريخ المباشرة</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date_comm" name="date_comm" placeholder="">
+                    <input type="date" id="date_comm" name="date_comm" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -111,7 +111,7 @@ $_SESSION['c_id'];
                     <label for="dnumber">عدده</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="dnumber" name="dnumber" placeholder="  عدده ..">
+                    <input type="text" id="dnumber" name="dnumber" placeholder="  عدده .." required autocomplete="off">
                 </div>
             </div>
 
@@ -120,7 +120,7 @@ $_SESSION['c_id'];
                     <label for="appoi_status">صفة التعيين</label>
                 </div>
                 <div class="col-75">
-                    <select id="appoi_status" name="appoi_status">
+                    <select id="appoi_status" name="appoi_status" required autocomplete="off">
                         <option value="">أختر صفة التعيين</option>
                         <option value="تعيين">تعيين</option>
                         <option value="نقل">نقل</option>
@@ -131,7 +131,7 @@ $_SESSION['c_id'];
                 </div>
             </div>
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-25">
                     <label for="degree">الدرجة</label>
                 </div>
@@ -148,7 +148,7 @@ $_SESSION['c_id'];
                     <input type="text" id="stage" name="stage" placeholder=" المرحلة..">
                 </div>
             </div>
-
+ -->
 
             <table>
                 <tr>

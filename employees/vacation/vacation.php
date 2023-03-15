@@ -75,7 +75,7 @@ $_SESSION['c_id'];
                     <label for="kind_hol">نوع الاجازة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="kind_hol" name="kind_hol" placeholder="  نوع الاجازة ..">
+                    <input type="text" id="kind_hol" name="kind_hol" placeholder="  نوع الاجازة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -84,7 +84,7 @@ $_SESSION['c_id'];
                     <label for="reason_hol">سبب الاجازة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="reason_hol" name="reason_hol" placeholder="  سبب الاجازة ..">
+                    <input type="text" id="reason_hol" name="reason_hol" placeholder="  سبب الاجازة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -95,7 +95,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -104,7 +104,7 @@ $_SESSION['c_id'];
                     <label for="dat">التاريخ</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="dat" name="dat" placeholder="">
+                    <input type="date" id="dat" name="dat" placeholder="" required autocomplete="off">
                 </div>
             </div>
 

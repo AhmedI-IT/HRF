@@ -58,7 +58,7 @@ session_start();
                     <label for="">الاسم واللقب </label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="ادخل اسم الموظف واللقب العلمي" name="a1">
+                    <input type="text" placeholder="ادخل اسم الموظف واللقب العلمي" name="a1" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -66,7 +66,7 @@ session_start();
                     <label for="">تاريخ الولادة:</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" name="a2">
+                    <input type="date" name="a2" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -74,7 +74,7 @@ session_start();
                     <label for="">مكان الولادة:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="ادخل مكان ولادة الموظف" name="a3">
+                    <input type="text" placeholder="ادخل مكان ولادة الموظف" name="a3" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -82,7 +82,7 @@ session_start();
                     <label for="">رقم الهاتف:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="رقم هاتف الموظف" name="a4">
+                    <input type="text" placeholder="رقم هاتف الموظف" name="a4" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -90,7 +90,7 @@ session_start();
                     <label for="">الحالة الزوجية:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="حالته الزوجية" name="a5">
+                    <input type="text" placeholder="حالته الزوجية" name="a5" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -98,7 +98,7 @@ session_start();
                     <label for="">عدد الاطفال:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="عدد الاطفال" name="a6">
+                    <input type="text" placeholder="عدد الاطفال" name="a6" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -106,7 +106,7 @@ session_start();
                     <label for="">رقم البطاقة الوطنية:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="رقم البطاقة الوطنية" name="a7">
+                    <input type="text" placeholder="رقم البطاقة الوطنية" name="a7" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -114,7 +114,7 @@ session_start();
                     <label for="">جهة الاصدار:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="جهة اصدار الهوية" name="a8">
+                    <input type="text" placeholder="جهة اصدار الهوية" name="a8" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -122,7 +122,7 @@ session_start();
                     <label for="">تاريخ الاصدار:</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" name="a9">
+                    <input type="date" name="a9" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -130,7 +130,7 @@ session_start();
                     <label for="">السكن الحالي:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="سكن الموظف الحالي" name="a10">
+                    <input type="text" placeholder="سكن الموظف الحالي" name="a10" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -138,7 +138,7 @@ session_start();
                     <label for="">رقم بطاقة التموينية:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="رقم البطاقة التموينية" name="a11">
+                    <input type="text" placeholder="رقم البطاقة التموينية" name="a11" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -146,7 +146,7 @@ session_start();
                     <label for="">جهة الاصدار:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="جهة اصدار البطاقة التموينية" name="a12">
+                    <input type="text" placeholder="جهة اصدار البطاقة التموينية" name="a12" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -154,7 +154,7 @@ session_start();
                     <label for="">تاريخ اصدارها:</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" name="a13">
+                    <input type="date" name="a13" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -162,7 +162,7 @@ session_start();
                     <label for="">الجنس:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="الجنس" name="a14">
+                    <input type="text" placeholder="الجنس" name="a14" required autocomplete="off">
                 </div>
             </div>
 
@@ -171,7 +171,7 @@ session_start();
                     <label for="wife_allowances">مخصصات زوجية:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="مخصصات زوجية" name="wife_allowances">
+                    <input type="text" placeholder="مخصصات زوجية" name="wife_allowances" required autocomplete="off">
                 </div>
             </div>
 
@@ -180,7 +180,7 @@ session_start();
                     <label for="allowances_child">مخصصات اطفال:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="مخصصات اطفال" name="allowances_child">
+                    <input type="text" placeholder="مخصصات اطفال" name="allowances_child" required autocomplete="off">
                 </div>
             </div>
 
@@ -189,7 +189,7 @@ session_start();
                     <label for="trans">نقل:</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" placeholder="نقل" name="trans">
+                    <input type="text" placeholder="نقل" name="trans" required autocomplete="off">
                 </div>
             </div>
 

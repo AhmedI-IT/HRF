@@ -77,7 +77,7 @@ $_SESSION['c_id'];
                     <label for="academic_year">السنة الدراسية</label>
                 </div>
                 <div class="col-75">
-                    <select id="academic_year" name="academic_year">
+                    <select id="academic_year" name="academic_year" required autocomplete="off">
                         <option value=''>اختر السنة الدراسية</option>
                         <?php
 
@@ -98,7 +98,7 @@ $_SESSION['c_id'];
                     <label for="Semester">الفصل الدراسي</label>
                 </div>
                 <div class="col-75">
-                    <select id="Semester" name="Semester">
+                    <select id="Semester" name="Semester" required autocomplete="off">
                         <option value="">اختر الفصل الدراسي</option>
                         <option value="الفصل الدراسي الاول">الفصل الدراسي الاول</option>
                         <option value="الفصل الدراسي الثاني">الفصل الدراسي الثاني</option>
@@ -111,7 +111,7 @@ $_SESSION['c_id'];
                     <label for="ad_number">رقم الامر الاداري</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="ad_number" name="ad_number" placeholder="  رقم الامر الاداري..">
+                    <input type="text" id="ad_number" name="ad_number" placeholder="  رقم الامر الاداري.." required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -119,7 +119,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -128,7 +128,7 @@ $_SESSION['c_id'];
                     <label for="reason"> السبب</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="reason" name="reason" placeholder=" السبب ..">
+                    <input type="text" id="reason" name="reason" placeholder=" السبب .." required autocomplete="off">
                 </div>
             </div>
             <table>

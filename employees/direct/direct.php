@@ -74,7 +74,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -83,7 +83,7 @@ $_SESSION['c_id'];
                     <label for="date_comm">تاريخ المباشرة</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date_comm" name="date_comm" placeholder="">
+                    <input type="date" id="date_comm" name="date_comm" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -93,7 +93,7 @@ $_SESSION['c_id'];
                     <label for="commet">ملاحظات</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="commet" name="commet" placeholder="    ملاحظات ..">
+                    <input type="text" id="commet" name="commet" placeholder="    ملاحظات .." required autocomplete="off">
                 </div>
             </div>
 
@@ -102,7 +102,7 @@ $_SESSION['c_id'];
                     <label for="direct_allowances">مخصصات خدمة جامعية</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="direct_allowances" name="direct_allowances" placeholder="    مخصصات خدمة الجامعية ..">
+                    <input type="text" id="direct_allowances" name="direct_allowances" placeholder="    مخصصات خدمة الجامعية .." required autocomplete="off">
                 </div>
             </div>
 

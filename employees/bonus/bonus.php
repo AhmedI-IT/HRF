@@ -74,7 +74,7 @@ $_SESSION['c_id'];
                     <label for="mark">الدرجة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="mark" name="mark" placeholder="  الدرجة ..">
+                    <input type="text" id="mark" name="mark" placeholder="  الدرجة .." required autocomplete="off">
                 </div>
             </div>
 
@@ -83,7 +83,7 @@ $_SESSION['c_id'];
                     <label for="level">المرحلة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="level" name="level" placeholder=" المرحلة..">
+                    <input type="text" id="level" name="level" placeholder=" المرحلة.." required autocomplete="off">
                 </div>
             </div>
 
@@ -92,7 +92,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -101,7 +101,7 @@ $_SESSION['c_id'];
                     <label for="date">التاريخ </label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="date" name="date" placeholder="">
+                    <input type="date" id="date" name="date" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -110,7 +110,7 @@ $_SESSION['c_id'];
                     <label for="type">نوع الاضافة</label>
                 </div>
                 <div class="col-75">
-                    <select id="type" name="type">
+                    <select id="type" name="type" required autocomplete="off">
                         <option value="">اختر نوع الاضافة</option>
                         <option value="علاوة">علاوة</option>
                         <option value="ترفيع">ترفيع</option>

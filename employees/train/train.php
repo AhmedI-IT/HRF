@@ -74,7 +74,7 @@ $_SESSION['c_id'];
                     <label for="course_title">عنوان الدورة</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="course_title" name="course_title" placeholder=" عنوان الدورة..">
+                    <input type="text" id="course_title" name="course_title" placeholder=" عنوان الدورة.." required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -82,7 +82,7 @@ $_SESSION['c_id'];
                     <label for="type">نوعها</label>
                 </div>
                 <div class="col-75">
-                    <select id="type" name="type">
+                    <select id="type" name="type" required autocomplete="off">
                         <option value="">أختر نوع الدورة التدريبية</option>
                         <option value="دورة">دورة</option>
                         <option value="ورشة">ورشة</option>
@@ -96,7 +96,7 @@ $_SESSION['c_id'];
                     <label for="course_date">تاريخ الدورة</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="course_date" name="course_date" placeholder="">
+                    <input type="date" id="course_date" name="course_date" placeholder="" required autocomplete="off">
                 </div>
             </div>
             <div class="row">
@@ -104,7 +104,7 @@ $_SESSION['c_id'];
                     <label for="dat">تاريخ صدور الامر</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="dat" name="dat" placeholder="">
+                    <input type="date" id="dat" name="dat" placeholder="" required autocomplete="off">
                 </div>
             </div>
 
@@ -113,7 +113,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 

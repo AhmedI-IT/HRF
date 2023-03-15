@@ -4,7 +4,10 @@
     box-sizing: border-box;
   }
   body{
-    background-color: rgb(172, 172, 172);
+    /* background-color: rgb(172, 172, 172); */
+    /* background-color: #929395; */
+    background-color: #d7d9dc;
+
   }
 
   .topnav {
@@ -60,7 +63,7 @@
     width: 1200px;
     height: auto;
     margin: auto;
-    color: #fff;
+    color: #000;
     position: relative;
   }
   
@@ -83,7 +86,7 @@
   .content .cn {
     width: 160px;
     height: 40px;
-    background: #04AA6D;
+    background: #005b84;
     /* background: #04AA6D; */
     border: none;
     margin-bottom: 20px;
@@ -96,16 +99,16 @@
   
   .content .cn a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     transition: 0.3s ease;
   }
   
   .cn:hover {
-    background-color: #fff;
+    background-color: #003e67;
   }
   
   .content span {
-    color: #04AA6D;
+    color: #005b84;
     font-size: 65px;
   }
   

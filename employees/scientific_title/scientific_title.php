@@ -74,7 +74,7 @@ $_SESSION['c_id'];
                     <label for="new_title">اللقب (الجديد)</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="new_title" name="new_title" placeholder=" اللقب ..">
+                    <input type="text" id="new_title" name="new_title" placeholder=" اللقب .." required autocomplete="off">
                 </div>
             </div>
 
@@ -83,7 +83,7 @@ $_SESSION['c_id'];
                     <label for="dat_code">تاريخ منح اللقب</label>
                 </div>
                 <div class="col-75">
-                    <input type="date" id="dat_code" name="dat_code">
+                    <input type="date" id="dat_code" name="dat_code" required autocomplete="off">
                 </div>
             </div>
 
@@ -92,7 +92,7 @@ $_SESSION['c_id'];
                     <label for="number">العدد </label>
                 </div>
                 <div class="col-75">
-                    <input type="text" id="number" name="number" placeholder="  العدد ..">
+                    <input type="text" id="number" name="number" placeholder="  العدد .." required autocomplete="off">
                 </div>
             </div>
 
@@ -101,7 +101,7 @@ $_SESSION['c_id'];
                     <label for="allowances">مخصصات لقب علمي</label>
                 </div>
                 <div class="col-75">
-                    <select id="allowances" name="allowances">
+                    <select id="allowances" name="allowances" required autocomplete="off">
                         <option value="25">مدرس مساعد</option>
                         <option value="35">مدرس</option>
                         <option value="45">استاذ مساعد</option>

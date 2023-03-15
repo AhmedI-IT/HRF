@@ -13,7 +13,7 @@ $_SESSION['c_id'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reports1.css">
+    <link rel="stylesheet" href="reports.css">
     <title>Reports</title>
 </head>
 
@@ -77,6 +77,10 @@ $_SESSION['c_id'];
                 </tr>
                 <td><button class="cn"><a href="../scientific_title/report.php">اللقب العلمي</a></button></td>
                 <td><button class="cn"><a href="../bonus/report.php">العلاوة</a></button></td>
+                <tr>
+                </tr>
+                <td><button class="cn"><a href="salary.php">الرواتب</a></button></td>
+                <td><button class="cn"><a href="#">...</a></button></td>
                 <tr>
 
             </table>
