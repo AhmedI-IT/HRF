@@ -18,6 +18,20 @@ $_SESSION['c_id'];
 
     <title>البعثات</title>
 </head>
+<style type="text/css">
+    #message {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
 
 <body>
     <div class="topnav">
@@ -50,7 +64,7 @@ $_SESSION['c_id'];
 
     ?>
     <div class="container">
-        <form action="missions_in.php" method="post">
+        <form action="" method="post">
             <div class="row">
                 <div class="col-25">
                     <!-- <label for="c_id">رمز الموظف</label> -->
@@ -156,7 +170,7 @@ $_SESSION['c_id'];
                 <tr>
                     <td>
                         <div class="row">
-                            <input type="submit" value="حفظ">
+                            <input type="submit" value="حفظ" name="submit">
                         </div>
                     </td>
                     <td>
@@ -170,6 +184,47 @@ $_SESSION['c_id'];
                 </tr>
 
             </table>
+            <?php
+
+            if (isset($_POST['submit'])) {
+                $link = mysqli_connect("localhost", "root", "", "hrf") or die("Faild");
+
+                $e_id = $_POST['e_id'];
+                $c_id = $_POST['c_id'];
+                $ministerial_order = $_POST['ministerial_order'];
+                $mnumber = $_POST['mnumber'];
+                $university_matter = $_POST['university_matter'];
+                $unumber = $_POST['unumber'];
+                $country = $_POST['country'];
+                $certificate_req = $_POST['certificate_req'];
+                $general_req = $_POST['general_req'];
+                $spec = $_POST['spec'];
+                $vacation_period = $_POST['vacation_period'];
+
+                $INS = "INSERT INTO `missions`(`e_id`, `c_id`,`ministerial_order`, `mnumber`, `university_matter`, `unumber`, `country`, `certificate_req`, `general_req`, `spec`, `vacation_period`) 
+                VALUES ('$e_id','$c_id','$ministerial_order','$mnumber','$university_matter','$unumber','$country','$certificate_req','$general_req','$spec','$vacation_period')";
+                // echo $INS;
+                $res = mysqli_query($link, $INS);
+                if ($res) {
+                    // header("Refresh: 1; URL =../info_emp/info_emp.php?ID=$e_id");
+                    echo '<div id="message">تم اضافة البيانات بنجاح</div>';
+                    include_once 'missions.php';
+                } elseif (!$res) {
+                    // die("Error in Query");
+                    echo '<div id="message">Error: ' . $INS . '<br>' . $link->error . '</div>';
+                    include_once 'missions.php';
+                }
+            }
+            ?>
+
+            <script type="text/javascript">
+                // Show the message for 3 seconds and then hide it
+                setTimeout(function() {
+                    document.getElementById('message').style.display = 'none';
+                    // window.location.href = "thank.php?ID= $e_id";
+
+                }, 3000);
+            </script>
 
 </body>
 

@@ -18,6 +18,19 @@ $_SESSION['c_id'];
 
     <title>الشهادات</title>
 </head>
+<style type="text/css">
+    #message {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
 
 <body>
     <div class="topnav">
@@ -49,7 +62,7 @@ $_SESSION['c_id'];
 
     ?>
     <div class="container">
-        <form action="certificate_in.php" method="post">
+        <form action="" method="post">
             <div class="row">
                 <div class="col-25">
                     <!-- <label for="c_id">رمز الموظف</label> -->
@@ -170,7 +183,7 @@ $_SESSION['c_id'];
                 <tr>
                     <td>
                         <div class="row">
-                            <input type="submit" value="حفظ">
+                            <input type="submit" value="حفظ" name="submit">
                         </div>
                     </td>
                     <td>
@@ -185,6 +198,50 @@ $_SESSION['c_id'];
 
             </table>
 
+            <?php
+
+            if (isset($_POST['submit'])) {
+                $link = mysqli_connect("localhost", "root", "", "hrf") or die("Faild");
+
+
+                $e_id = $_POST['e_id'];
+                $c_id = $_POST['c_id'];
+                $certific = $_POST['certific'];
+                $general_jur = $_POST['general_jur'];
+                $spec = $_POST['spec'];
+                $date_obtained = $_POST['date_obtained'];
+                $date_univ = $_POST['date_univ'];
+                $number = $_POST['number'];
+                $title_messeg = $_POST['anran_thesis'];
+                $univ = $_POST['univ'];
+                $state = $_POST['state'];
+                $certific_allowances = $_POST['certific_allowances'];
+
+                $INS = "INSERT INTO `certificates`(`e_id`, `c_id`,`certific`, `general_jur`, `spec`, `date_obtained`, `date_university`, `number`, `title_mess`, `university`, `state`,`certific_allowances`)
+                VALUES ('$e_id','$c_id','$certific','$general_jur','$spec','$date_obtained','$date_univ','$number','$title_messeg','$univ','$state','$certific_allowances')";
+                // echo $INS;
+                $res = mysqli_query($link, $INS);
+
+                if ($res) {
+                    // header("location: thank.php?ID=$e_id");
+                    echo '<div id="message">تم اضافة البيانات بنجاح</div>';
+                    include_once 'certificate.php';
+                } elseif (!$res) {
+                    // die("Error in Query");
+                    echo '<div id="message">Error: ' . $INS . '<br>' . $link->error . '</div>';
+                    include_once 'certificate.php';
+                    // header("location: thank.php?ID=$e_id");
+                }
+            }
+            ?>
+            <script type="text/javascript">
+                // Show the message for 3 seconds and then hide it
+                setTimeout(function() {
+                    document.getElementById('message').style.display = 'none';
+                    // window.location.href = "thank.php?ID= $e_id";
+
+                }, 3000);
+            </script>
 </body>
 
 </html>

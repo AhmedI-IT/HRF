@@ -18,6 +18,19 @@ $_SESSION['c_id'];
 
     <title>Document</title>
 </head>
+<style type="text/css">
+    #message {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
 
 <body>
     <div class="topnav">
@@ -51,7 +64,7 @@ $_SESSION['c_id'];
 
     ?>
     <div class="container">
-        <form action="dispatch_in.php" method="post">
+        <form action="" method="post">
             <div class="row">
                 <div class="col-25">
                     <!-- <label for="c_id">رمز الموظف</label> -->
@@ -139,7 +152,7 @@ $_SESSION['c_id'];
                 <tr>
                     <td>
                         <div class="row">
-                            <input type="submit" value="حفظ">
+                            <input type="submit" value="حفظ" name="submit">
                         </div>
                     </td>
                     <td>
@@ -153,6 +166,44 @@ $_SESSION['c_id'];
                 </tr>
 
             </table>
+
+            <?php
+
+            if (isset($_POST['submit'])) {
+
+                $link = mysqli_connect("localhost", "root", "", "hrf") or die("Faild");
+
+                $e_id = $_POST['e_id'];
+                $c_id = $_POST['c_id'];
+                $dat = $_POST['dat'];
+                $number = $_POST['number'];
+                $date_comm = $_POST['date_comm'];
+                $provider_it = $_POST['provider_it'];
+                $purpose_dispatch = $_POST['purpose_dispatch'];
+                $dispatch_period = $_POST['dispatch_period'];
+                $state = $_POST['state'];
+
+                $INS = "INSERT INTO `dispatch`(`e_id`, `c_id`,`dat`, `number`, `date_comm`, `provider_it`, `purpose_dispatch`, `dispatch_period`, `state`)
+                VALUES ('$e_id','$c_id','$dat','$number','$date_comm','$provider_it','$purpose_dispatch','$dispatch_period','$state')";
+                // echo $INS;
+                $res = mysqli_query($link, $INS);
+                if ($res) {
+                    // header("Refresh: 0; URL =../info_emp/info_emp.php?ID=$e_id");
+                    echo '<div id="message">تم اضافة البيانات بنجاح</div>';
+                    include_once 'dispatch.php';
+                } elseif (!$res) {
+                    // die("Error in Query");
+                    echo '<div id="message">Error: ' . $INS . '<br>' . $link->error . '</div>';
+                    include_once 'dispatch.php';
+                }
+            }
+            ?>
+            <script type="text/javascript">
+                // Show the message for 3 seconds and then hide it
+                setTimeout(function() {
+                    document.getElementById('message').style.display = 'none';
+                }, 3000);
+            </script>
 
 </body>
 

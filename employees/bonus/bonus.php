@@ -17,6 +17,20 @@ $_SESSION['c_id'];
     <link rel="stylesheet" href="../sty.css">
     <title>العلاوة</title>
 </head>
+<style type="text/css">
+    #message {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+
 
 <body>
     <div class="topnav">
@@ -49,7 +63,7 @@ $_SESSION['c_id'];
 
     ?>
     <div class="container">
-        <form action="bonus_in.php" method="post">
+        <form action="" method="post">
             <div class="row">
                 <div class="col-25">
                     <!-- <label for="c_id">رمز الموظف</label> -->
@@ -123,7 +137,7 @@ $_SESSION['c_id'];
                 <tr>
                     <td>
                         <div class="row">
-                            <input type="submit" value="حفظ">
+                            <input type="submit" value="حفظ" name="submit">
                         </div>
                     </td>
                     <td>
@@ -137,6 +151,47 @@ $_SESSION['c_id'];
                 </tr>
 
             </table>
+
+            <?php
+
+            if (isset($_POST['submit'])) {
+                $link = mysqli_connect("localhost", "root", "", "hrf") or die("Faild");
+
+                $e_id = $_POST['e_id'];
+                $c_id = $_POST['c_id'];
+                $mark = $_POST['mark'];
+                $level = $_POST['level'];
+                $number = $_POST['number'];
+                $date = $_POST['date'];
+                $type = $_POST['type'];
+
+
+
+                $INS = "INSERT INTO `bonus`( `e_id`, `c_id`, `mark`, `level`, `number`, `date`, `type`)
+                VALUES ('$e_id','$c_id','$mark','$level','$number','$date','$type')";
+                // echo $INS;
+                $res = mysqli_query($link, $INS);
+                if ($res) {
+                    // header("location: thank.php?ID=$e_id");
+                    echo '<div id="message">تم اضافة البيانات بنجاح</div>';
+                    include_once 'bonus.php';
+                } elseif (!$res) {
+                    // die("Error in Query");
+                    echo '<div id="message">Error: ' . $INS . '<br>' . $link->error . '</div>';
+                    include_once 'bonus.php';
+                    // header("location: thank.php?ID=$e_id");
+                }
+            }
+            ?>
+            <script type="text/javascript">
+                // Show the message for 3 seconds and then hide it
+                setTimeout(function() {
+                    document.getElementById('message').style.display = 'none';
+                    // window.location.href = "thank.php?ID= $e_id";
+
+                }, 3000);
+            </script>
+
 
 </body>
 
