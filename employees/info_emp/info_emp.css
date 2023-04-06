@@ -5,18 +5,29 @@
   }
  
 
+
   .topnav {
     position: relative;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+z-index: 1;
+  }
+  .topnav .topnav-left p a{
+color: blue;
+    font-weight: bold;
+  font-size: 14px;
   }
   
-  .topnav h1,h2,h3,img {
+  .topnav h1,h2,h3,p,img {
     /* float: left; */
     color: #f2f2f2;
     text-align: center;
     /* padding: 14px 16px; */
-    padding: 8px 10px;
+    padding: 4px 6px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -40,7 +51,7 @@
   
   /* Responsive navigation menu (for mobile devices) */
   @media screen and (max-width: 600px) {
-    .topnav h1,h2,h3, .topnav-right {
+    .topnav h1,h2,h3,p, .topnav-right {
       float: none;
       display: block;
     }
@@ -52,6 +63,9 @@
       transform: none;
     }
   }
+  
+  
+  /* ===================================== */
   .table1{
     width: 50%;
     height: 100%;

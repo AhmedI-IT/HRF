@@ -9,14 +9,23 @@
     position: relative;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
+  .topnav .topnav-left p a{
+    color: blue;
+        font-weight: bold;
+      font-size: 14px;
+      }
   
-  .topnav h1,h2,h3,img {
+  .topnav h1,h2,h3,p,img {
     /* float: left; */
     color: #f2f2f2;
     text-align: center;
     /* padding: 14px 16px; */
-    padding: 8px 10px;
+    padding: 4px 6px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -40,7 +49,7 @@
   
   /* Responsive navigation menu (for mobile devices) */
   @media screen and (max-width: 600px) {
-    .topnav h1,h2,h3, .topnav-right {
+    .topnav h1,h2,h3,p, .topnav-right {
       float: none;
       display: block;
     }
@@ -71,13 +80,13 @@ tr:nth-child(even) {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #477326;
     color: white;
     text-align: center;
 }
 
 input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #005b84;
     color: white;
     width: 150px;
     height: 40px;
@@ -90,7 +99,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #003e67;
 }
 
 a{
@@ -98,7 +107,7 @@ a{
   }
 
 button {
-    background-color: #04AA6D;
+    background-color: #005b84;
     color: white;
     width: 150px;
     height: 40px;
@@ -111,5 +120,5 @@ button {
   }
 
   button:hover{
-    background-color: #45a049;
+    background-color: #003e67;
   }

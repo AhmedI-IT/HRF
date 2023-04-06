@@ -32,9 +32,8 @@ function filterTable($query)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="report.css"> -->
-    <link rel="stylesheet" href="../style_rep.css">
-
+    <!-- <link rel="stylesheet" href="../style_rep.css"> -->
+    <link rel="stylesheet" href="../rep_style.css">
     <title>تقارير الدورات التدريبية</title>
 </head>
 
@@ -51,6 +50,8 @@ function filterTable($query)
             <h3><?php echo $_SESSION['college'] ?></h3>
             <!-- <h2>Employee name ....</h2> -->
             <h2><?php echo $_SESSION['name'];  ?></h2>
+            <p><a href="../logout.php">تسجيل خروج</a></p>
+
         </div>
         <!-- Right-aligned links -->
         <div class="topnav-right">
@@ -59,6 +60,7 @@ function filterTable($query)
             <h1>ادارة الموظفين</h1>
         </div>
     </div>
+    <br><br><br><br><br><br>
 
     <div class="searchs">
         <form action="" method="POST">

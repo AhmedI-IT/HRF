@@ -14,7 +14,7 @@ $_SESSION['c_id'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="direct.css"> -->
-    <link rel="stylesheet" href="../sty.css">
+    <link rel="stylesheet" href="../style.css">
     <title>المباشرة</title>
 </head>
 <style type="text/css">
@@ -44,6 +44,7 @@ $_SESSION['c_id'];
             <h3><?php echo $_SESSION['college'] ?></h3>
             <!-- <h2>Employee name ....</h2> -->
             <h2><?php echo $_SESSION['name'];  ?></h2>
+            <p><a href="../logout.php">تسجيل خروج</a></p>
         </div>
         <!-- Right-aligned links -->
         <div class="topnav-right">
@@ -53,6 +54,7 @@ $_SESSION['c_id'];
         </div>
     </div>
 
+    <br><br><br><br><br><br><br><br>
 
     <center>
         <h1>المباشرة</h1>

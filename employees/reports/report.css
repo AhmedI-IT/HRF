@@ -15,13 +15,17 @@
     overflow: hidden;
     background-color: #333;
   }
-  
-  .topnav h1,h2,h3,img {
+  .topnav .topnav-left h6 a{
+    color: blue;
+        font-weight: bold;
+      font-size: 14px;
+      }
+  .topnav h1,h2,h3,h6,img {
     /* float: left; */
     color: #f2f2f2;
     text-align: center;
     /* padding: 14px 16px; */
-    padding: 8px 10px;
+    padding: 4px 6px;
     text-decoration: none;
     font-size: 17px;
   }
@@ -45,7 +49,7 @@
   
   /* Responsive navigation menu (for mobile devices) */
   @media screen and (max-width: 600px) {
-    .topnav h1,h2,h3, .topnav-right {
+    .topnav h1,h2,h3,h6, .topnav-right {
       float: none;
       display: block;
     }

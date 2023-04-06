@@ -73,9 +73,11 @@
         </tr>
         <br><br>
         <?php
+        $count = 0;
         while ($row = mysqli_fetch_array($res)) : ?>
+            <?php $count += 1; ?>
             <tr>
-                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $count; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo $row['date']; ?></td>
             </tr>

@@ -31,7 +31,8 @@ function filterTable($query)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="query.css">
+    <!-- <link rel="stylesheet" href="query.css"> -->
+    <link rel="stylesheet" href="StyleQuery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Query</title>
 </head>
@@ -50,6 +51,8 @@ function filterTable($query)
                 <h3><?php echo $_SESSION['college'] ?></h3>
                 <!-- <h2>Employee name ....</h2> -->
                 <h2><?php echo $_SESSION['name'];  ?></h2>
+                <p><a href="../logout.php">تسجيل خروج</a></p>
+
             </div>
             <!-- Right-aligned links -->
             <div class="topnav-right">
@@ -58,7 +61,7 @@ function filterTable($query)
                 <h1>ادارة الموظفين</h1>
             </div>
         </div>
-
+        <br><br><br><br><br><br><br>
         <!-- <p>Full width:</p> -->
         <form class="example" method="POST">
             <input type="text" placeholder="Search.." name="ValueToSrearch">

@@ -13,7 +13,7 @@ $_SESSION['c_id'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="salary.css">
+    <link rel="stylesheet" href="salary1.css">
     <title>الراتب</title>
 </head>
 
@@ -30,6 +30,8 @@ $_SESSION['c_id'];
             <h3><?php echo $_SESSION['college'] ?></h3>
             <!-- <h2>Employee name ....</h2> -->
             <h2><?php echo $_SESSION['name'];  ?></h2>
+            <p><a href="../logout.php">تسجيل خروج</a></p>
+
         </div>
         <!-- Right-aligned links -->
         <div class="topnav-right">
@@ -38,7 +40,8 @@ $_SESSION['c_id'];
             <h1>ادارة الموظفين</h1>
         </div>
     </div>
-    <br>
+    <br> <br><br><br><br><br>
+
     <center>
         <h1>معلومات الراتب</h1>
     </center>

@@ -13,7 +13,7 @@ $_SESSION['c_id'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="info_emp1.css">
+    <link rel="stylesheet" href="info_emp.css">
     <title>Information Employees</title>
 </head>
 
@@ -31,6 +31,8 @@ $_SESSION['c_id'];
             <h3><?php echo $_SESSION['college'] ?></h3>
             <!-- <h2>Employee name ....</h2> -->
             <h2><?php echo $_SESSION['name'];  ?></h2>
+            <p><a href="../logout.php">تسجيل خروج</a></p>
+
         </div>
         <!-- Right-aligned links -->
         <div class="topnav-right">
@@ -39,7 +41,7 @@ $_SESSION['c_id'];
             <h1>ادارة الموظفين</h1>
         </div>
     </div>
-    <br> <br>
+    <br> <br><br><br><br><br><br><br><br><br>
 
     <div class="table1">
         <table class="tab" width="50%" border=1px solid black>
@@ -116,15 +118,15 @@ $_SESSION['c_id'];
             </div>
             <div>
                 <button class="cn"><?php echo "<a href='../scientific_title/scientific_title.php?ID=" . $row['id'] . "'>اللقب العلمي</a>" ?></button>
-                <button class="cn"><a href="#">قسم علمي</a></button>
+                <!-- <button class="cn"><a href="#">قسم علمي</a></button> -->
+                <button class="cn"><?php echo "<a href='../bonus/bonus.php?ID=" . $row['id'] . "'> العلاوة او الترفيع</a>" ?></button>
             </div>
             <div>
-                <button class="cn"><?php echo "<a href='../bonus/bonus.php?ID=" . $row['id'] . "'> العلاوة او الترفيع</a>" ?></button>
                 <button class="cn"><?php echo "<a href='salary.php?ID=" . $row['id'] . "'>الراتب</a>" ?></button>
+                <button class="cn"><?php echo "<a href='updatEmp.php?ID=" . $row['id'] . "'>تحديث المعلومات</a>" ?></button>
                 <!-- <button class="cn"><a href="salary.php">الراتب</a></button> -->
             </div>
             <div>
-                <button class="cn"><?php echo "<a href='updatEmp.php?ID=" . $row['id'] . "'>تحديث المعلومات</a>" ?></button>
                 <button class="cn"><a href="#">السيرة الشخصية</a></button>
             </div>
         </div>

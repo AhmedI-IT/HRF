@@ -14,10 +14,12 @@ $_SESSION['c_id'];
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="main.css">
+    <!-- <link rel="stylesheet" href="main1.css"> -->
+    <link rel="stylesheet" href="style.css">
 
     <title>الصفحة الرئيسية</title>
 </head>
+
 
 <body>
     <div class="topnav">
@@ -32,6 +34,7 @@ $_SESSION['c_id'];
             <h3><?php echo $_SESSION['college'] ?></h3>
             <!-- <h2>Employee name ....</h2> -->
             <h2><?php echo $_SESSION['name'];  ?></h2>
+            <p><a href="../logout.php">تسجيل خروج</a></p>
         </div>
         <!-- Right-aligned links -->
         <div class="topnav-right">
@@ -40,7 +43,8 @@ $_SESSION['c_id'];
             <h1>ادارة الموظفين</h1>
         </div>
     </div>
-
+    <br><br><br>
+    <br><br>
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">

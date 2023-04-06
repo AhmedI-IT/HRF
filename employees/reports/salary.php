@@ -7,10 +7,12 @@ $_SESSION['c_id'];
 
 ?>
 <?php
+$link = mysqli_connect("localhost", "root", "", "hrf") or die("Faild");
+
 if (isset($_POST['submit'])) {
     $valueToSrearch = $_POST['ValueToSrearch'];
-    // $query = "SELECT employee.* FROM employee,college WHERE employee.c_id = college.c_id and college.c_id = '" . $_SESSION['c_id'] . "' and employee.name like '%" . $valueToSrearch . "%'";
-    $query = "SELECT employee.*, bonus.*,scientific_title.*, direct.*, certificates.* FROM employee,college,bonus, scientific_title, direct, certificates WHERE employee.c_id = college.c_id and college.c_id = '" . $_SESSION['c_id'] . "' and employee.id = bonus.e_id and employee.id =scientific_title.e_id and employee.id = direct.e_id and employee.id = certificates.e_id and employee.name like '%" . $valueToSrearch . "%'";
+    // $query = "SELECT employee.*, bonus.*,scientific_title.*, direct.*, certificates.* FROM employee,college,bonus, scientific_title, direct, certificates WHERE employee.c_id = college.c_id and college.c_id = '" . $_SESSION['c_id'] . "' and employee.id = bonus.e_id and employee.id =scientific_title.e_id and employee.id = direct.e_id and employee.id = certificates.e_id and employee.name like '%" . $valueToSrearch . "%'";
+    $query = "select employee.*,bonus.*,scientific_title.*, direct.*, certificates.* from employee,college, scientific_title, direct, certificates,bonus, (select e_id,max(date) as transaction_date from bonus group by e_id) max_user where employee.c_id = college.c_id and college.c_id = '" . $_SESSION['c_id'] . "' and employee.id = bonus.e_id and employee.id =scientific_title.e_id and employee.id = direct.e_id and employee.id = certificates.e_id and bonus.e_id=max_user.e_id and bonus.date=max_user.transaction_date and employee.name like '%" . $valueToSrearch . "%'";
     $search_res = filterTable($query);
 } else {
     // $query = "SELECT employee.*, bonus.*,scientific_title.*, direct.*, certificates.* FROM employee,college,bonus, scientific_title, direct, certificates WHERE employee.c_id = college.c_id and college.c_id = '" . $_SESSION['c_id'] . "' and employee.id = bonus.e_id and employee.id =scientific_title.e_id and employee.id = direct.e_id and employee.id = certificates.e_id ";
@@ -39,7 +41,8 @@ function filterTable($query)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="salary.css">
+    <!-- <link rel="stylesheet" href="salary.css"> -->
+    <link rel="stylesheet" href="sal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Query</title>
 </head>
@@ -58,6 +61,8 @@ function filterTable($query)
                 <h3><?php echo $_SESSION['college'] ?></h3>
                 <!-- <h2>Employee name ....</h2> -->
                 <h2><?php echo $_SESSION['name'];  ?></h2>
+                <p><a href="../logout.php">تسجيل خروج</a></p>
+
             </div>
             <!-- Right-aligned links -->
             <div class="topnav-right">
@@ -66,6 +71,7 @@ function filterTable($query)
                 <h1>ادارة الموظفين</h1>
             </div>
         </div>
+        <br><br><br><br><br><br><br>
 
         <!-- <p>Full width:</p> -->
         <form class="example" method="POST">
@@ -128,6 +134,7 @@ function filterTable($query)
 
 
             $count = 0;
+            // if (mysqli_num_rows($search_res) > 0) {
             while ($row = mysqli_fetch_array($search_res)) {
                 $count = $count + 1;
                 echo "<tr>";
@@ -180,11 +187,52 @@ function filterTable($query)
                 $Final_salary = $salarry - ($retirement + $tax);
                 echo "<td>" . $Final_salary . "</td>";
 
-
-
-
                 echo "</tr>";
+
+                // الاسم
+                $name =  $row['name'];
+                //الدرجة 
+                $degreem;
+                // المرحلة
+                $stagem;
+                // السنة
+                $year;
+                // الشهر
+                $today;
+                // الراتب
+                $salla = $sulam[$degreem][$stagem];
+                // مخصصات اللقب العلمي
+                $allowances;
+                // مخصصات الخدمة الجامعية
+                $direct_allowances;
+                // مخصصات الشهادة 
+                $certific_allowances;
+                // مخصصات الزوجية
+                $wife_allowances;
+                // مخصصات الاطفال
+                $allowances_child;
+                // النقل
+                $trans;
+                // الراتب الاسمي
+                $salaryName;
+                // التقاعد
+                $retirement;
+                // الضريبة
+                $tax;
+                // الراتب النهائي
+                $Final_salary;
+
+                $INS = "INSERT INTO `salary`(`name`, `mark`, `stage`, `month`, `year`, `salla`, `allowances`, `direct_allowances`, `certific_allowances`, `wife_allowances`, `allowances_child`, `trans`, `salaryName`, `retirement`, `tax`, `Final_salary`) 
+                VALUES ('$name','$degreem',' $stagem','$year','$today','$salla','$allowances','$direct_allowances','$certific_allowances','$wife_allowances','$allowances_child','$trans','$salaryName','$retirement','$tax','$Final_salary')";
+                if (mysqli_query($link, $INS)) {
+                    echo "";
+                } else {
+                    echo "Error: ";
+                }
             }
+            // } else {
+            //     echo "0 results";
+            // }
 
             ?>
 
